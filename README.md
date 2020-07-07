@@ -1,4 +1,4 @@
-# smart-grocery
+# smart-list
 
 ## Project setup
 ```
