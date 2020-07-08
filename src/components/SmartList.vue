@@ -72,8 +72,8 @@
                             <v-text-field placeholder="QUANTIDADE" v-model="k.ammount"></v-text-field>
                           </v-col>
                           <v-col cols="3" class="d-inline-flex justify-center align-items-center">
-                            <v-icon v-if="!k.done" v-on:click="checkDone(k)" class="pr-2" v-bind:class="{ 'icon-done': k.done }">mdi-check</v-icon>
-                            <v-icon v-on:click="removeItem(k)" v-bind:class="{ 'icon-done': k.done }">mdi-close</v-icon>
+                            <v-icon v-if="!k.done" v-on:click="checkDone(k)" class="pr-2" v-bind:class="{ 'icon-done': k.done }" title="Adicionar">mdi-check</v-icon>
+                            <v-icon v-on:click="removeItem(k)" v-bind:class="{ 'icon-done': k.done }" title="Retirar">mdi-close</v-icon>
                           </v-col>
                         
                         </v-card-text>
@@ -160,8 +160,14 @@
 <style scoped>
   .text-card {
     padding: 0;
-    border: 1px ridge olive;
-    border-radius: 5px;
     margin-bottom: 5px;
+    max-height: 70px;
+    background: #f3f3f3;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .v-input {
+    padding: 0;
   }
 </style>
